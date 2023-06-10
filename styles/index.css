@@ -51,8 +51,7 @@ body {
 .board-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 1.2rem;
-    column-gap: .5rem;
+    gap: .7rem;
     /* background-color: rgb(2, 84, 100, 0.6); */
     background-color: white;
     box-sizing: border-box;

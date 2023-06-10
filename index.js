@@ -110,6 +110,7 @@ const declareWinner = () => {
     if (moves === 9) {
         finished = true;
         $('#modal-wrapper').css("display", "block");
+        $('.winner-title').html('.. Game Tie ..');
     }
     if (winner === 0 && finished) {
         $('#modal-wrapper').css("display", "block");
