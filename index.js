@@ -101,7 +101,8 @@ const checkForWinner = () => {
     }
 
     if (finished || moves === 9) {
-        declareWinner()
+        setTimeout(declareWinner, 1000);
+        // declareWinner()
     }
 
 }
