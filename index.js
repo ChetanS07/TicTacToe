@@ -109,9 +109,11 @@ const checkForWinner = () => {
 
 const declareWinner = () => {
     if (moves === 9) {
-        finished = true;
+        // finished = true;
+        winner = -1;
         $('#modal-wrapper').css("display", "block");
         $('.winner-title').html('.. Game Tie ..');
+        return;
     }
     if (winner === 0 && finished) {
         $('#modal-wrapper').css("display", "block");
