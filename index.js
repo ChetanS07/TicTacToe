@@ -5,94 +5,94 @@ let finished = false;
 let winner = -1;
 
 const restartGame = () => {
-    document.getElementById('modal-wrapper').style.display = 'none';
+    $('#modal-wrapper').css("display", "none");
     setTimeout(startGame, 500);
 }
 
 const checkForWinner = () => {
 
-    let btns = document.querySelectorAll('.box');
+    let btns = $(".box");
 
-    // const cond1 = (btns.item(0).innerText && btns.item(0).disabled === btns.item(1).innerText && btns.item(1).disabled === btns.item(2).innerText && btns.item(2).disabled)
+    const cond1 = (btns.get(0).innerText === btns.get(1).innerText && btns.get(1).innerText === btns.get(2).innerText) && (btns.get(0).disabled && btns.get(1).disabled && btns.get(2).disabled);
+    const cond2 = (btns.get(3).innerText === btns.get(4).innerText && btns.get(4).innerText === btns.get(5).innerText) && (btns.get(3).disabled && btns.get(4).disabled && btns.get(5).disabled);
+    const cond3 = (btns.get(6).innerText === btns.get(7).innerText && btns.get(7).innerText === btns.get(8).innerText) && (btns.get(6).disabled && btns.get(7).disabled && btns.get(8).disabled);
+    const cond4 = (btns.get(0).innerText === btns.get(3).innerText && btns.get(3).innerText === btns.get(6).innerText) && (btns.get(0).disabled && btns.get(3).disabled && btns.get(6).disabled);
+    const cond5 = (btns.get(1).innerText === btns.get(4).innerText && btns.get(4).innerText === btns.get(7).innerText) && (btns.get(1).disabled && btns.get(4).disabled && btns.get(7).disabled);
+    const cond6 = (btns.get(2).innerText === btns.get(5).innerText && btns.get(5).innerText === btns.get(8).innerText) && (btns.get(2).disabled && btns.get(5).disabled && btns.get(8).disabled);
+    const cond7 = (btns.get(0).innerText === btns.get(4).innerText && btns.get(4).innerText === btns.get(8).innerText) && (btns.get(0).disabled && btns.get(4).disabled && btns.get(8).disabled);
+    const cond8 = (btns.get(2).innerText === btns.get(4).innerText && btns.get(4).innerText === btns.get(6).innerText) && (btns.get(2).disabled && btns.get(4).disabled && btns.get(6).disabled);
 
-    const cond1 = (btns.item(0).innerText === btns.item(1).innerText && btns.item(1).innerText === btns.item(2).innerText) && (btns.item(0).disabled && btns.item(1).disabled && btns.item(2).disabled);
-    const cond2 = (btns.item(3).innerText === btns.item(4).innerText && btns.item(4).innerText === btns.item(5).innerText) && (btns.item(3).disabled && btns.item(4).disabled && btns.item(5).disabled);
-    const cond3 = (btns.item(6).innerText === btns.item(7).innerText && btns.item(7).innerText === btns.item(8).innerText) && (btns.item(6).disabled && btns.item(7).disabled && btns.item(8).disabled);
-    const cond4 = (btns.item(0).innerText === btns.item(3).innerText && btns.item(3).innerText === btns.item(6).innerText) && (btns.item(0).disabled && btns.item(3).disabled && btns.item(6).disabled);
-    const cond5 = (btns.item(1).innerText === btns.item(4).innerText && btns.item(4).innerText === btns.item(7).innerText) && (btns.item(1).disabled && btns.item(4).disabled && btns.item(7).disabled);
-    const cond6 = (btns.item(2).innerText === btns.item(5).innerText && btns.item(5).innerText === btns.item(8).innerText) && (btns.item(2).disabled && btns.item(5).disabled && btns.item(8).disabled);
-    const cond7 = (btns.item(0).innerText === btns.item(4).innerText && btns.item(4).innerText === btns.item(8).innerText) && (btns.item(0).disabled && btns.item(4).disabled && btns.item(8).disabled);
-    const cond8 = (btns.item(2).innerText === btns.item(4).innerText && btns.item(4).innerText === btns.item(6).innerText) && (btns.item(2).disabled && btns.item(4).disabled && btns.item(6).disabled);
+    // console.log(cond1);
 
     switch (true) {
         case cond1:
-            if (btns.item(0).innerHTML === playerA) {
+            if (btns.get(0).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(0).innerHTML === playerB) {
+            } else if (btns.get(0).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond2:
-            if (btns.item(3).innerHTML === playerA) {
+            if (btns.get(3).innerTextt === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(3).innerHTML === playerB) {
+            } else if (btns.get(3).innerTextt === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond3:
-            if (btns.item(6).innerHTML === playerA) {
+            if (btns.get(6).innerTextt === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(6).innerHTML === playerB) {
+            } else if (btns.get(6).innerTextt === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond4:
-            if (btns.item(0).innerHTML === playerA) {
+            if (btns.get(0).innerTextt === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(0).innerHTML === playerB) {
+            } else if (btns.get(0).innerTextt === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond5:
-            if (btns.item(1).innerHTML === playerA) {
+            if (btns.get(1).innerTextt === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(1).innerHTML === playerB) {
+            } else if (btns.get(1).innerTextt === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond6:
-            if (btns.item(2).innerHTML === playerA) {
+            if (btns.get(2).innerTextt === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(2).innerHTML === playerB) {
+            } else if (btns.get(2).innerTextt === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond7:
-            if (btns.item(0).innerHTML === playerA) {
+            if (btns.get(0).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(0).innerHTML === playerB) {
+            } else if (btns.get(0).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond8:
-            if (btns.item(2).innerHTML === playerA) {
+            if (btns.get(2).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.item(2).innerHTML === playerB) {
+            } else if (btns.get(2).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
@@ -109,16 +109,16 @@ const checkForWinner = () => {
 const declareWinner = () => {
     if (moves === 9) {
         finished = true;
-        document.getElementById('modal-wrapper').style.display = 'block';
+        $('#modal-wrapper').css("display", "block");
     }
     if (winner === 0 && finished) {
-        document.getElementById('modal-wrapper').style.display = 'block';
-        document.querySelector(".winner-title").innerHTML = '&#X1F490 Player A won &#X1F490'
+        $('#modal-wrapper').css("display", "block");
+        $('.winner-title').html('&#X1F490 Player A won &#X1F490');
     } else if (winner === 1 && finished) {
-        document.getElementById('modal-wrapper').style.display = 'block';
-        document.querySelector(".winner-title").innerHTML = 'Player B won ...'
+        $('#modal-wrapper').css("display", "block");
+        $('.winner-title').html('&#X1F490 Player B won &#X1F490');
     }
-    document.querySelector('.start-btn').innerText = "Start";
+    $('.start-btn').text('start');
 }
 
 const handleClick = (event) => {
@@ -139,20 +139,18 @@ const handleClick = (event) => {
     } else {
         alert('Start by clicking button...')
     }
-    // console.log(event.target.innerText);
 
 }
 
 const startGame = () => {
 
-    document.querySelector('.start-btn').innerText = "Restart";
+    $('.start-btn').text('Restart');
 
-    let btns = document.querySelectorAll('.box');
-    btns.forEach(element => {
-        element.addEventListener('click', handleClick);
-        element.style.color = 'transparent';
-        element.disabled = false;
-        // console.log(element.name);
+    let btns = $('.box');
+    btns.each((index, element) => {
+        $(element).unbind().on('click', handleClick);
+        $(element).css("color", "transparent");
+        $(element).prop('disabled', false)
     })
 
     finished = false
