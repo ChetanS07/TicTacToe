@@ -117,10 +117,10 @@ const declareWinner = () => {
     }
     if (winner === 0 && finished) {
         $('#modal-wrapper').css("display", "block");
-        $('.winner-title').html('&#X1F490 Player A won &#X1F490');
+        $('.winner-title').html('Player A won <i class="fa fa-trophy fa-2x"></i>');
     } else if (winner === 1 && finished) {
         $('#modal-wrapper').css("display", "block");
-        $('.winner-title').html('&#X1F490 Player B won &#X1F490');
+        $('.winner-title').html('Player B won <i class="fa fa-trophy fa-2x"></i>');
     }
     $('.start-btn').text('start');
 }

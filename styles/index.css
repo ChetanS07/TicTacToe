@@ -79,7 +79,7 @@ body {
 
 #modal-wrapper {
     position: absolute;
-    display: none;
+    /* display: none; */
     border: 2px solid black;
     height: 100%;
     width: 100%;
@@ -99,7 +99,7 @@ body {
     flex-direction: column;
     border: 2px solid white;
     background-color: #F1F6F9;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 }
 
 .modal h2 {
@@ -110,8 +110,8 @@ body {
 .modal button {
     font-size: 1.5rem;
     padding: 1rem 3rem;
-    border-radius: 1rem;
-    background-color: #394867;
+    /* border-radius: 1rem; */
+    background-color: #131720;
     color: rgb(245, 245, 201);
     font-family: 'Yatra One', cursive;
 }
@@ -124,6 +124,15 @@ body {
     height: 100%;
     width: 100%;
     z-index: 10;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-icon {
+    color: #F1F6F9;
 }
 
 
