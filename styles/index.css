@@ -79,7 +79,7 @@ body {
 
 #modal-wrapper {
     position: absolute;
-    /* display: none; */
+    display: none;
     border: 2px solid black;
     height: 100%;
     width: 100%;
@@ -167,5 +167,10 @@ body {
         background-color: #394867;
         color: rgb(245, 245, 201);
         font-family: 'Yatra One', cursive;
+    }
+
+    .contact-icons {
+        gap: 1rem;
+        margin-top: 1rem;
     }
 }
