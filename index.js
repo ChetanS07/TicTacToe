@@ -22,7 +22,7 @@ const checkForWinner = () => {
     const cond7 = (btns.get(0).innerText === btns.get(4).innerText && btns.get(4).innerText === btns.get(8).innerText) && (btns.get(0).disabled && btns.get(4).disabled && btns.get(8).disabled);
     const cond8 = (btns.get(2).innerText === btns.get(4).innerText && btns.get(4).innerText === btns.get(6).innerText) && (btns.get(2).disabled && btns.get(4).disabled && btns.get(6).disabled);
 
-    // console.log(cond1);
+    console.log(cond2);
 
     switch (true) {
         case cond1:
@@ -35,46 +35,46 @@ const checkForWinner = () => {
             }
             break;
         case cond2:
-            if (btns.get(3).innerTextt === playerA) {
+            if (btns.get(3).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.get(3).innerTextt === playerB) {
+            } else if (btns.get(3).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond3:
-            if (btns.get(6).innerTextt === playerA) {
+            if (btns.get(6).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.get(6).innerTextt === playerB) {
+            } else if (btns.get(6).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond4:
-            if (btns.get(0).innerTextt === playerA) {
+            if (btns.get(0).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.get(0).innerTextt === playerB) {
+            } else if (btns.get(0).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond5:
-            if (btns.get(1).innerTextt === playerA) {
+            if (btns.get(1).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.get(1).innerTextt === playerB) {
+            } else if (btns.get(1).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
             break;
         case cond6:
-            if (btns.get(2).innerTextt === playerA) {
+            if (btns.get(2).innerText === playerA) {
                 finished = true;
                 winner = 0;
-            } else if (btns.get(2).innerTextt === playerB) {
+            } else if (btns.get(2).innerText === playerB) {
                 finished = true;
                 winner = 1;
             }
@@ -126,11 +126,11 @@ const handleClick = (event) => {
     if (moves !== -1) {
         if (moves % 2 === 0) {
             event.target.innerText = playerA;
-            event.target.style.color = 'black';
+            event.target.style.color = 'white';
             event.target.disabled = true;
         } else {
             event.target.innerText = playerB;
-            event.target.style.color = 'black';
+            event.target.style.color = 'white';
             event.target.disabled = true;
         }
         ++moves;

@@ -5,8 +5,9 @@ body {
     justify-content: flex-start;
     gap: 5rem;
 
-    background: radial-gradient(circle, rgba(103, 103, 103, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    /* background: radial-gradient(circle, rgba(103, 103, 103, 1) 0%, rgba(0, 0, 0, 1) 100%); */
 
+    background-color: black;
 
     height: 100vh;
 }
@@ -52,7 +53,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.2rem;
     column-gap: .5rem;
-    background-color: rgb(2, 84, 100, 0.4);
+    /* background-color: rgb(2, 84, 100, 0.6); */
+    background-color: white;
     box-sizing: border-box;
 
     border-radius: 1rem;
@@ -65,7 +67,8 @@ body {
     border: none;
     outline: none;
     box-sizing: border-box;
-    background-color: rgb(255, 229, 105, 1);
+    /* background-color: rgb(255, 229, 105, 1); */
+    background-color: black;
     color: transparent;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 3rem;
