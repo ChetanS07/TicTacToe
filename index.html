@@ -10,28 +10,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <script defer src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
 </head>
 
 <body class="flex-aj">
     <div class="start-wrapper flex-aj">
-        <h1>
+        <h1 style="font-family: 'Monoton', cursive;">TIC TAC TOE</h1>
+        <!-- <h1>
             Click Below to Start Game
-        </h1>
-        <button class="start-btn">Start</button>
+        </h1> -->
+        <button class="start-btn" onclick="startGame()">Start</button>
     </div>
     <div class="board-wrapper">
-        <button class="box box-clicked" style="border-start-start-radius: 1rem;">x</button>
-        <button class="box">o</button>
-        <button class="box" style="border-start-end-radius: 1rem;">x</button>
-        <button class="box box-clicked">o</button>
-        <button class="box">o</button>
-        <button class="box">o</button>
-        <button class="box" style="border-bottom-left-radius: 1rem;">o</button>
-        <button class="box">x</button>
-        <button class="box" style="border-bottom-right-radius: 1rem;">o</button>
+        <button class="box flex-aj" name="b1" style="border-start-start-radius: 1rem;">0</button>
+        <button class="box flex-aj" name="b2">1</button>
+        <button class="box flex-aj" name="b3" style="border-start-end-radius: 1rem;">2</button>
+        <button class="box flex-aj" name="b4">3</button>
+        <button class="box flex-aj" name="b5">4</button>
+        <button class="box flex-aj" name="b6">5</button>
+        <button class="box flex-aj" name="b7" style="border-bottom-left-radius: 1rem;">6</button>
+        <button class="box flex-aj" name="b8">7</button>
+        <button class="box flex-aj" name="b9" style="border-bottom-right-radius: 1rem;">8</button>
+    </div>
+
+    <div id="modal-wrapper">
+        <div class="blur"></div>
+        <div class="modal flex-aj">
+            <h2 class="winner-title">Player Win</h2>
+            <button onclick="restartGame()">Restart The Game</button>
+        </div>
     </div>
 
 </body>

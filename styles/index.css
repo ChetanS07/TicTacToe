@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 5rem;
 
     background: radial-gradient(circle, rgba(103, 103, 103, 1) 0%, rgba(0, 0, 0, 1) 100%);
@@ -23,6 +24,7 @@ body {
 .start-wrapper {
     color: #dfd9d9;
     font-family: 'Architects Daughter', cursive;
+    /* margin-top: .5rem; */
 }
 
 .start-btn {
@@ -57,10 +59,6 @@ body {
 }
 
 .box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     padding: .5rem 2.7rem;
 
     border: none;
@@ -74,4 +72,88 @@ body {
 
 .box:active {
     border: 2px solid black;
+}
+
+#modal-wrapper {
+    position: absolute;
+    display: none;
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 15;
+
+    height: 30%;
+    width: 40%;
+    flex-direction: column;
+    border: 2px solid white;
+    background-color: #F1F6F9;
+    border-radius: 1rem;
+}
+
+.modal h2 {
+    font-size: 2rem;
+    font-family: 'Yatra One', cursive;
+}
+
+.modal button {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    background-color: #394867;
+    color: rgb(245, 245, 201);
+    font-family: 'Yatra One', cursive;
+}
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+
+@media only screen and (max-width : 600px) {
+    body {
+        /* padding: 1rem; */
+        height: 95vh;
+    }
+
+    .start-wrapper {
+        margin-top: -2rem;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .box {
+        font-size: 2rem;
+        padding: .5rem 2.2rem;
+    }
+
+    .modal {
+        height: 25%;
+        width: 90%;
+    }
+
+    .modal button {
+        font-size: 1.1rem;
+        padding: .8rem 2rem;
+        border-radius: 1rem;
+        background-color: #394867;
+        color: rgb(245, 245, 201);
+        font-family: 'Yatra One', cursive;
+    }
 }
