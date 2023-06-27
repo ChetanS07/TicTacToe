@@ -27,7 +27,7 @@ Welcome to the Tic-Tac-Toe game repository! This simple yet classic game is impl
   
   or
   
-  Website hosted at url, https://chetansprojectstictactoe.netlify.app/    
+  Website hosted at url, https://csprojectstictactoe.netlify.app/    
   
   
 Thank you for visiting this repository! We hope you enjoy playing the Tic-Tac-Toe game implemented in jQuery. Have fun and happy gaming!
